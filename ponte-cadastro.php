@@ -13,6 +13,17 @@ $tel = $_POST['telefone'];
 $query = mysqli_query($conn, "INSERT INTO usuarios (nome, sobrenome, email, senha, confirme-senha, idade, telefone) 
 VALUES ('$name', '$sobrename', '$email', '$senha', '$confirmesenha', '$number', '$tel')");
 
+if($query){
+    
+    $q = mysqli_query($conn, "SELECT * FROM usuarios where nome='$name' and sobrenome='$sobrename'");
+    while($row = mysqli_fetch_row($q)){
+        $_SESSION['msg'] = $row[2];
+    }
+    
+
+    header('Location: form-cadastro.php');
+}
+
 
 
 
