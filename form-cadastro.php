@@ -14,7 +14,7 @@ include 'conexao.php';
 <body>
     <h1>Cadastrar Usuario</h1>
     
-    <form method="POST" action="form-cadastro.php">
+    <form method="POST" action="ponte-cadastro.php">
      <label>Nome: </label>
      <input type="nome" name="nome" placeholder="Digite seu nome"><br><br>
 
@@ -27,14 +27,12 @@ include 'conexao.php';
      <label>Senha: </label>
      <input type="password" name="senha" placeholder="Digite sua senha"><br><br>
      
-     <label>Confirme sua senha: </label>
-     <input type="password" name="confirme-senha" placeholder="Confirme sua senha"><br><br>
 
      <label>Idade: </label>
      <input type="number" name="idade" placeholder="Digite sua idade"><br><br>
 
      <label>Telefone: </label>
-     <input type="tel" name="Telefone" placeholder="Digite seu telefone"><br><br>
+     <input type="tel" name="telefone" placeholder="Digite seu telefone"><br><br>
 
       <input type="submit" value="Cadastre-se">
     </form>
